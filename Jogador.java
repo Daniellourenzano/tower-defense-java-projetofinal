@@ -16,9 +16,9 @@ public class Jogador {
     void venderTorre(Torre torre){
         int valorVenda = 0;
         if (torre.poder.equals("laser")) {
-            valorVenda = 100; // metade do preço original (200)
+            valorVenda = 100; 
         } else if (torre.poder.equals("Bola de fogo")) {
-            valorVenda = 40; // metade do preço original (80)
+            valorVenda = 40; 
         }
         this.dinheiro += valorVenda;
         System.out.println("Torre vendida! Você recebeu " + valorVenda + " moedas.");

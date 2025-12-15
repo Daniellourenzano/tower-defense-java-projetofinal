@@ -3,7 +3,7 @@ package leandro;
 import javax.swing.*;
 
 import java.awt.*;
-import java.awt.event.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +51,7 @@ public class JogoGUI extends JPanel {
 
     private void initGameObjects() {
         try {
-            inimigo = new Inimigo(600, 120, 5, 5, "toxico");
+            inimigo = new Inimigo(600, 120, indicePercurso, indicePercurso, "toxico");
         } catch (Exception ex) {
             try {
                 inimigo = (Inimigo) Class.forName("testeleandro.Inimigo").getDeclaredConstructor().newInstance();
@@ -155,7 +155,7 @@ public class JogoGUI extends JPanel {
     private void mostrarOpcoesAposRodada() {
         String[] opcoes = {"Comprar torre", "Vender torre", "Jogar novamente", "Sair"};
         int escolha = JOptionPane.showOptionDialog(this,
-                "parabéns, você venceu. Agora o que deseja fazer?",
+                "o inimigo chegou a torre mãe e a atacou com seu poder toxico. Agora o que deseja fazer?",
                 "Fim de rodada",
                 JOptionPane.DEFAULT_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
@@ -177,7 +177,7 @@ public class JogoGUI extends JPanel {
     private void mostrarDialogVitoria() {
         String[] op = {"Jogar novamente", "Sair"};
         int res = JOptionPane.showOptionDialog(this,
-                "Parabéns, o inimigo foi derrotado!",
+                "Parabéns, o inimigo foi derrotado! agora o povo de onazneroul está a salvo",
                 "Vitória",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.INFORMATION_MESSAGE,
